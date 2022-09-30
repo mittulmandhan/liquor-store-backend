@@ -1,4 +1,4 @@
-package com.liqour.departmentservice;
+package com.liquorstore.department;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

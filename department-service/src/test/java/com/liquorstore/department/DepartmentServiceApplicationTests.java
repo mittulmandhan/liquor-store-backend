@@ -1,4 +1,4 @@
-package com.liqour.departmentservice;
+package com.liquorstore.department;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

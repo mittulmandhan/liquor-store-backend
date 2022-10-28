@@ -1,4 +1,4 @@
-package com.liquorstorebackend.login.model;
+package com.liquorstore.login.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

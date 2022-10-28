@@ -1,19 +1,18 @@
-package com.liquorstorebackend.login.controllers;
+package com.liquorstore.login.controllers;
 
-import java.util.List;
-
+import com.liquorstore.login.data.EmployeeRepository;
+import com.liquorstore.login.model.Employee;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.liquorstorebackend.login.data.EmployeeRepository;
-import com.liquorstorebackend.login.model.Employee;
+import java.util.List;
 
 @Slf4j
-@RestController
+@Controller
 @RequestMapping("/login")
 public class EmployeeController {
 
@@ -24,7 +23,8 @@ public class EmployeeController {
 	public String newEmployee(Employee employee) {
 
 		employeeData.save(employee);
-		return ("redirect:/listEmployees.html");
+
+		return "redirect:/login/listEmployees.html";
 
 	}
 

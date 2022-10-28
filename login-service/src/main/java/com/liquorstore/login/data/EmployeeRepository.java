@@ -1,8 +1,7 @@
-package com.liquorstorebackend.login.data;
+package com.liquorstore.login.data;
 
+import com.liquorstore.login.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.liquorstorebackend.login.model.Employee;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 

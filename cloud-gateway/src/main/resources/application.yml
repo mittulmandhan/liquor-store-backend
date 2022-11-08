@@ -28,7 +28,7 @@ spring:
         - id: LOGIN-SERVICE
           uri: lb://LOGIN-SERVICE
           predicates:
-            - Path=/login/**
+            - Path=/profile/**
           filters:
             - name: CircuitBreaker
               args:

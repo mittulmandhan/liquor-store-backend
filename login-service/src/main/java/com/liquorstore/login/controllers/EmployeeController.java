@@ -13,7 +13,7 @@ import java.util.List;
 
 @Slf4j
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/profile")
 public class EmployeeController {
 
 	@Autowired

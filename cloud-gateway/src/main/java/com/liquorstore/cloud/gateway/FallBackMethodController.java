@@ -18,9 +18,9 @@ public class FallBackMethodController {
                 "Please try again later!";
     }
 
-    @GetMapping("/loginServiceFallBack")
-    public String loginServiceFallBackMethod() {
-        return "Login Service is taking longer than usual" +
+    @GetMapping("/securityServiceFallBack")
+    public String securityServiceFallBackMethod() {
+        return "Security Service is taking longer than usual" +
                 "Please try again later!";
     }
 

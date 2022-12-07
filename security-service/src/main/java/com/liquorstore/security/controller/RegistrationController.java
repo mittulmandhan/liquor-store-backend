@@ -19,11 +19,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.security.Principal;
 import java.util.Optional;
 import java.util.UUID;
 
 @Slf4j
 @RestController
+@RequestMapping("/security")
 public class RegistrationController {
 
     @Autowired
@@ -43,6 +45,12 @@ public class RegistrationController {
 
     @Autowired
     private MailSenderService mailSenderService;
+
+    @GetMapping("/hello")
+    public String hello(Principal principal) {
+        return "Hello! Welcome to my sample resource";
+    }
+
 
     @PostMapping("/register")
     public String registerUser(@RequestBody UserModel userModel, final HttpServletRequest request) {

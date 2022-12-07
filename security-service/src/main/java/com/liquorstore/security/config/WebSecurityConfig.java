@@ -25,7 +25,7 @@ public class WebSecurityConfig {
     private JwtFilter jwtFilter;
 
     private static final String[] WHITE_LIST_URLS = {
-//            "/hello",
+            "/hello",
             "/register",
             "/verifyRegistration",
             "/resendVerificationToken",
@@ -51,8 +51,8 @@ public class WebSecurityConfig {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .antMatchers(WHITE_LIST_URLS).permitAll()
-                .antMatchers("/**").authenticated()
+                .antMatchers("/security/**").permitAll()
+                .antMatchers("/**").denyAll()
                 .and()
 //                .formLogin(Customizer.withDefaults())
                 .sessionManagement()

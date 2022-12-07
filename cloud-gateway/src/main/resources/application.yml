@@ -25,15 +25,15 @@ spring:
               args:
                 name: DEPARTMENT-SERVICE
                 fallbackuri: forward:/departmentServiceFallBack
-        - id: LOGIN-SERVICE
-          uri: lb://LOGIN-SERVICE
+        - id: SECURITY-SERVICE
+          uri: lb://SECURITY-SERVICE
           predicates:
-            - Path=/profile/**
+            - Path=/security/**
           filters:
             - name: CircuitBreaker
               args:
-                name: LOGIN-SERVICE
-                fallbackuri: forward:/loginServiceFallBack
+                name: SECURITY-SERVICE
+                fallbackuri: forward:/securityServiceFallBack
 
 hystrix:
   command:

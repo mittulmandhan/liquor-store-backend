@@ -161,6 +161,11 @@ public class RegistrationController {
 
     }
 
+//    @PostMapping("/getUserDetails")
+//    public UserDetails getUserDetails(@RequestBody UserDetailsRequest userDetailsRequest) {
+//        return customUserDetailsService.loadUserByUsername(userDetailsRequest.getUserName());
+//    }
+
     private String passwordResetTokenMail(User user, String applicationUrl, String token) {
         String url = applicationUrl + "/savePassword?token=" + token;
         log.info("Click the link to reset your password: " + url);
